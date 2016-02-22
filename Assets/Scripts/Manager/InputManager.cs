@@ -61,14 +61,14 @@ public class InputManager : MonoBehaviour
            
                 //P1MoveXaxis
 
-          //Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
-          //
-          //if(Direction != Vector3.zero)
-          //_P1Component.MoveInDirection(Direction);
-          //
-          //
+          Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
+          
+          if(Direction != Vector3.zero)
+          _P1Component.MoveInDirection(Direction);
+          
+          
           // if (Input.GetButtonDown("P1Attack"))
-          //     _P1Component.UseAttack();
+              // _P1Component.UseAttack();
 
 
         }
