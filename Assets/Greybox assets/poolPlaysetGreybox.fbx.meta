@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 9b27bfff551753146a372b4af5739910
+timeCreated: 1456114341
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: beachBall
+    100002: chairs
+    100004: fence
+    100006: lifeSavers
+    100008: lLifeSaver
+    100010: lPalmTree
+    100012: lStairs
+    100014: lStairs1
+    100016: palmTrees
+    100018: pool
+    100020: pool 1
+    100022: poolChair01
+    100024: poolChair02
+    100026: poolChair03
+    100028: //RootNode
+    100030: poolStairs
+    100032: potPlant01
+    100034: potPlant02
+    100036: potPlants
+    100038: rLifeSaver
+    100040: rPalmTree
+    100042: rug
+    100044: sand
+    100046: sky
+    100048: torch01
+    100050: torch02
+    100052: torch03
+    100054: torch04
+    100056: torches
+    100058: umbrella
+    100060: water
+    400000: beachBall
+    400002: chairs
+    400004: fence
+    400006: lifeSavers
+    400008: lLifeSaver
+    400010: lPalmTree
+    400012: lStairs
+    400014: lStairs1
+    400016: palmTrees
+    400018: pool
+    400020: pool 1
+    400022: poolChair01
+    400024: poolChair02
+    400026: poolChair03
+    400028: //RootNode
+    400030: poolStairs
+    400032: potPlant01
+    400034: potPlant02
+    400036: potPlants
+    400038: rLifeSaver
+    400040: rPalmTree
+    400042: rug
+    400044: sand
+    400046: sky
+    400048: torch01
+    400050: torch02
+    400052: torch03
+    400054: torch04
+    400056: torches
+    400058: umbrella
+    400060: water
+    2300000: beachBall
+    2300002: fence
+    2300004: lLifeSaver
+    2300006: lPalmTree
+    2300008: lStairs
+    2300010: lStairs1
+    2300012: pool 1
+    2300014: poolChair01
+    2300016: poolChair02
+    2300018: poolChair03
+    2300020: poolStairs
+    2300022: potPlant01
+    2300024: potPlant02
+    2300026: rLifeSaver
+    2300028: rPalmTree
+    2300030: rug
+    2300032: sand
+    2300034: sky
+    2300036: torch01
+    2300038: torch02
+    2300040: torch03
+    2300042: torch04
+    2300044: umbrella
+    2300046: water
+    3300000: beachBall
+    3300002: fence
+    3300004: lLifeSaver
+    3300006: lPalmTree
+    3300008: lStairs
+    3300010: lStairs1
+    3300012: pool 1
+    3300014: poolChair01
+    3300016: poolChair02
+    3300018: poolChair03
+    3300020: poolStairs
+    3300022: potPlant01
+    3300024: potPlant02
+    3300026: rLifeSaver
+    3300028: rPalmTree
+    3300030: rug
+    3300032: sand
+    3300034: sky
+    3300036: torch01
+    3300038: torch02
+    3300040: torch03
+    3300042: torch04
+    3300044: umbrella
+    3300046: water
+    4300000: poolStairs
+    4300002: pool
+    4300004: lStairs
+    4300006: lStairs1
+    4300008: poolChair01
+    4300010: poolChair02
+    4300012: poolChair03
+    4300014: rPalmTree
+    4300016: lPalmTree
+    4300018: potPlant02
+    4300020: potPlant01
+    4300022: rLifeSaver
+    4300024: lLifeSaver
+    4300026: torch04
+    4300028: torch03
+    4300030: torch02
+    4300032: torch01
+    4300034: sand
+    4300036: beachBall
+    4300038: rug
+    4300040: umbrella
+    4300042: fence
+    4300044: water
+    4300046: sky
+    6400000: beachBall
+    6400002: fence
+    6400004: lLifeSaver
+    6400006: lPalmTree
+    6400008: lStairs
+    6400010: lStairs1
+    6400012: pool 1
+    6400014: poolChair01
+    6400016: poolChair02
+    6400018: poolChair03
+    6400020: poolStairs
+    6400022: potPlant01
+    6400024: potPlant02
+    6400026: rLifeSaver
+    6400028: rPalmTree
+    6400030: rug
+    6400032: sand
+    6400034: sky
+    6400036: torch01
+    6400038: torch02
+    6400040: torch03
+    6400042: torch04
+    6400044: umbrella
+    6400046: water
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
