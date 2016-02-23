@@ -36,15 +36,32 @@ public class Player : MonoBehaviour
     private float _MovementSpeed;
 
     [SerializeField]
-    //This is the characters attack strength (we dont need to worry about attack speed since thats animation driven)
-    //Note: This is redudant now each body part may have a corresponding strength
-    private int _AttackStrength;
+    //A float for how strong/ high you will jump
+    private float _JumpStrength;
 
     //If any of the following arms or legs are false it means they are disabled and will play the appropiate animation
     private bool _LeftLegActive;   
     private bool _RightLegActive;
     private bool _LeftArmActive;
     private bool _RightArmctive;
+
+    //Probably super redudant but im just going to have pointers to them if ever i need them
+    [SerializeField]
+    private GameObject _LeftLegObj;
+
+    [SerializeField]
+    private GameObject _RightLegObj;
+
+    [SerializeField]
+    private GameObject _LeftArmObj;
+
+    [SerializeField]
+    private GameObject _RightArmObj;
+
+    private BodyPart _LeftLegComponent;
+    private BodyPart _RightLegComponent;
+    private BodyPart _LeftArmComponent;
+    private BodyPart _RightArmComponent;
 
     //Does the character have a weapon equipped?
     private bool _isWeaponEquipped;
@@ -55,11 +72,26 @@ public class Player : MonoBehaviour
     //The rigidbody which is used for mostly jumping
     private Rigidbody _RigidBody;
 
+    //Is the character jumping
+    private bool _isJumping;
+
     // Use this for initialization
     void Start()
     {
         _Animator = GetComponent<Animator>();
         _RigidBody = GetComponent<Rigidbody>();
+
+        _LeftArmComponent = _LeftArmObj.GetComponent<BodyPart>();
+        _RightArmComponent = _RightArmObj.GetComponent<BodyPart>();
+        _RightLegComponent = _RightLegObj.GetComponent<BodyPart>();
+        _LeftLegComponent = _LeftLegObj.GetComponent<BodyPart>();
+
+        _isJumping = false;
+        _LeftLegActive = true;
+        _RightLegActive = true;
+        _RightArmctive = true;
+        _LeftArmActive = true;
+
     }
 
     // Update is called once per frame
@@ -73,7 +105,11 @@ public class Player : MonoBehaviour
     /// </summary>
     public void UseJump()
     {
-
+        if (!_isJumping)
+        {
+            _RigidBody.AddForce(new Vector3(0, _JumpStrength, 0));
+            _Animator.SetTrigger("IsJumpingStart");
+        }
     }
 
     /// <UsePunch Summary>
@@ -82,7 +118,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void UsePunch()
     {
-
+        _Animator.SetTrigger("IsPunching");
     }
 
     /// <Pick Up Weapon>

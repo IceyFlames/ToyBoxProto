@@ -53,6 +53,8 @@ public class InputManager : MonoBehaviour
         Player3Input();
         Player4Input();
 	}
+    
+    //In addition to checking which button has been pressed make sure that you change the number on the component
 
     private void Player1Input()
     {
@@ -79,7 +81,10 @@ public class InputManager : MonoBehaviour
     {
         if (_P2Active)
         {
-           
+            Vector3 Direction = new Vector3(Input.GetAxis("P2MoveXaxis"), 0, Input.GetAxis("P2MoveYaxis"));
+
+            if (Direction != Vector3.zero)
+                _P2Component.MoveInDirection(Direction);
         }
 
     }
@@ -88,7 +93,10 @@ public class InputManager : MonoBehaviour
     {
         if (_P3Active)
         {
-           
+            Vector3 Direction = new Vector3(Input.GetAxis("P3MoveXaxis"), 0, Input.GetAxis("P3MoveYaxis"));
+
+            if (Direction != Vector3.zero)
+                _P3Component.MoveInDirection(Direction);
         }
 
     }
@@ -97,7 +105,10 @@ public class InputManager : MonoBehaviour
     {
         if (_P4Active)
         {
-            
+            Vector3 Direction = new Vector3(Input.GetAxis("P4MoveXaxis"), 0, Input.GetAxis("P4MoveYaxis"));
+
+            if (Direction != Vector3.zero)
+                _P4Component.MoveInDirection(Direction);
         }
 
     }
