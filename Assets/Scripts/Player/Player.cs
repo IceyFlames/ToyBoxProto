@@ -19,7 +19,8 @@ public enum Limbs
     RIGHTLEG,
     BODY,
     HEAD,
-    FEET
+    FEET,
+    WEAPON
 }
 
 /// <Player Class>
