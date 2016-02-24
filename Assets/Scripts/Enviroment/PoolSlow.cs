@@ -22,6 +22,7 @@ public class PoolSlow : MonoBehaviour
         {
             ThirdPersonCharacter player = playerobj.gameObject.GetComponent<ThirdPersonCharacter>();
             player.m_MoveSpeedMultiplier = .5f;
+            player.m_AnimSpeedMultiplier = .5f;
         }
 
     }
@@ -32,6 +33,7 @@ public class PoolSlow : MonoBehaviour
         {
             ThirdPersonCharacter player = playerobj.gameObject.GetComponent<ThirdPersonCharacter>();
             player.m_MoveSpeedMultiplier = 1;
+            player.m_AnimSpeedMultiplier = 1;
         }
     }
 
