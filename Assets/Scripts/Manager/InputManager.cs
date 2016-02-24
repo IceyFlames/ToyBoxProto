@@ -37,10 +37,11 @@ public class InputManager : MonoBehaviour
         Debug.Log("The Amount of players in the scene" + _amountOfPlayers.ToString());
         SetActivePlayers();
 
-        _P1Component = _P1Prefab.GetComponent<Player>();
-        _P2Component = _P2Prefab.GetComponent<Player>();
-        _P3Component = _P3Prefab.GetComponent<Player>();
-        _P4Component = _P4Prefab.GetComponent<Player>();
+       _P1Component = _P1Prefab.GetComponent<Player>();
+       _P2Component = _P2Prefab.GetComponent<Player>();
+       _P3Component = _P3Prefab.GetComponent<Player>();
+       _P4Component = _P4Prefab.GetComponent<Player>();
+        
 
 	}
 	

@@ -22,6 +22,7 @@ public class BodyPart : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         _Player = _parent.GetComponent<Player>();
     }
 
