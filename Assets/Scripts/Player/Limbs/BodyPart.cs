@@ -7,7 +7,12 @@ using System.Collections;
 
 public class BodyPart : MonoBehaviour
 {
-    public GameObject _parent;
+    [SerializeField]
+    private GameObject _parent;
+
+    [SerializeField]
+    private GameObject _MeshChild;
+
     private Player _Player;
 
     [SerializeField]
@@ -19,11 +24,17 @@ public class BodyPart : MonoBehaviour
     [SerializeField]
     private int _WeaponStrength;
 
+    private SkinnedMeshRenderer _Renderer;
+
+    private string _ObjectName;
+
     // Use this for initialization
     void Start()
     {
-       
+
         _Player = _parent.GetComponent<Player>();
+        _Renderer = _MeshChild.GetComponent<SkinnedMeshRenderer>();
+        _ObjectName = _Player.ReturnName();
     }
 
     // Update is called once per frame
@@ -39,15 +50,22 @@ public class BodyPart : MonoBehaviour
         if (collision.gameObject.tag == "Weapon")
         {
             BodyPart BodyPart = collision.gameObject.GetComponent<BodyPart>();
-            _Health -= BodyPart.GetWeaponStrength();
 
-            if(_Health < 0)
+            if (BodyPart.ReturnName() != _ObjectName)
             {
-                _Player.MissingBodyPart(_Limb);
-                this.gameObject.SetActive(false);
+                _Health -= BodyPart.GetWeaponStrength();
+
+                if (_Health < 0)
+                {
+                    _Player.MissingBodyPart(_Limb);
+                    _Renderer.enabled = false;
+                    this.gameObject.SetActive(false);
+                }
             }
+
         }
     }
 
-   public int GetWeaponStrength() { return _WeaponStrength; }
+    public int GetWeaponStrength() { return _WeaponStrength; }
+    public string ReturnName() { return _ObjectName; }
 }

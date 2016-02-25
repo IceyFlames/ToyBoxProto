@@ -1,0 +1,1110 @@
+fileFormatVersion: 2
+guid: b005e3f922926d241a1ea9d8892b8d99
+timeCreated: 1456374001
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bottom_torso
+    100002: head
+    100004: head 1
+    100006: l_ankle
+    100008: l_arm
+    100010: l_foot_CTRL
+    100012: l_foot_IK
+    100014: l_hip
+    100016: l_knee
+    100018: l_leg
+    100020: l_shoulder
+    100022: lower_body
+    100024: mesh
+    100026: r_ankle
+    100028: r_arm
+    100030: r_foot_CTRL
+    100032: r_foot_IK
+    100034: r_hip
+    100036: r_knee
+    100038: r_leg
+    100040: r_shoulder
+    100042: root
+    100044: ruth
+    100046: //RootNode
+    100048: upper_body
+    100050: upper_body 1
+    400000: bottom_torso
+    400002: head
+    400004: head 1
+    400006: l_ankle
+    400008: l_arm
+    400010: l_foot_CTRL
+    400012: l_foot_IK
+    400014: l_hip
+    400016: l_knee
+    400018: l_leg
+    400020: l_shoulder
+    400022: lower_body
+    400024: mesh
+    400026: r_ankle
+    400028: r_arm
+    400030: r_foot_CTRL
+    400032: r_foot_IK
+    400034: r_hip
+    400036: r_knee
+    400038: r_leg
+    400040: r_shoulder
+    400042: root
+    400044: ruth
+    400046: //RootNode
+    400048: upper_body
+    400050: upper_body 1
+    4300000: head
+    4300002: upper_body
+    4300004: l_arm
+    4300006: r_arm
+    4300008: bottom_torso
+    4300010: l_leg
+    4300012: r_leg
+    7400000: Take 001
+    7400002: Walk
+    7400004: Run
+    7400006: Jump
+    7400008: InAir
+    7400010: Landing
+    7400012: R_Punch
+    7400014: L_Punch
+    7400016: L_Kick
+    7400018: R_Kick
+    7400020: NoLegs
+    7400022: Grab
+    9500000: //RootNode
+    13700000: bottom_torso
+    13700002: head
+    13700004: l_arm
+    13700006: l_leg
+    13700008: r_arm
+    13700010: r_leg
+    13700012: upper_body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 140
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: InAir
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 210
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Landing
+      takeName: Take 001
+      firstFrame: 220
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_Punch
+      takeName: Take 001
+      firstFrame: 280
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: L_Punch
+      takeName: Take 001
+      firstFrame: 320
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: L_Kick
+      takeName: Take 001
+      firstFrame: 360
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_Kick
+      takeName: Take 001
+      firstFrame: 420
+      lastFrame: 470
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NoLegs
+      takeName: Take 001
+      firstFrame: 490
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Grab
+      takeName: Take 001
+      firstFrame: 560
+      lastFrame: 560
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ruth
+        weight: 1
+      - path: ruth/l_foot_CTRL
+        weight: 1
+      - path: ruth/l_foot_IK
+        weight: 1
+      - path: ruth/mesh
+        weight: 1
+      - path: ruth/mesh/bottom_torso
+        weight: 1
+      - path: ruth/mesh/head
+        weight: 1
+      - path: ruth/mesh/l_arm
+        weight: 1
+      - path: ruth/mesh/l_leg
+        weight: 1
+      - path: ruth/mesh/r_arm
+        weight: 1
+      - path: ruth/mesh/r_leg
+        weight: 1
+      - path: ruth/mesh/upper_body
+        weight: 1
+      - path: ruth/r_foot_CTRL
+        weight: 1
+      - path: ruth/r_foot_IK
+        weight: 1
+      - path: ruth/root
+        weight: 1
+      - path: ruth/root/lower_body
+        weight: 1
+      - path: ruth/root/lower_body/l_hip
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee
+        weight: 1
+      - path: ruth/root/lower_body/l_hip/l_knee/l_ankle
+        weight: 1
+      - path: ruth/root/lower_body/r_hip
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee
+        weight: 1
+      - path: ruth/root/lower_body/r_hip/r_knee/r_ankle
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/head 1
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/l_shoulder
+        weight: 1
+      - path: ruth/root/lower_body/upper_body 1/r_shoulder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

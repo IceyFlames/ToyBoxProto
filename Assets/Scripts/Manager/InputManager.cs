@@ -59,20 +59,33 @@ public class InputManager : MonoBehaviour
 
     private void Player1Input()
     {
-        if(_P1Active)
+        if (_P1Active)
         {
-           
-                //P1MoveXaxis
 
-          Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
-          
-          if(Direction != Vector3.zero)
-          _P1Component.MoveInDirection(Direction);
-          
-          
-          // if (Input.GetButtonDown("P1Attack"))
-              // _P1Component.UseAttack();
+            //P1MoveXaxis
 
+            Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
+            Direction.x = Direction.x * -1f;
+            if (Direction != Vector3.zero)
+            {
+                _P1Component.MoveInDirection(Direction);
+            }
+
+
+            if (Input.GetButtonDown("P1Jump"))
+            {
+                _P1Component.UseJump();
+            }
+
+            if (Input.GetButtonDown("P1Punch"))
+            {
+                _P1Component.UsePunch();
+            }
+
+            if (Input.GetButtonDown("P1Kick"))
+            {
+                _P1Component.UseKick();
+            }
 
         }
 
@@ -83,9 +96,25 @@ public class InputManager : MonoBehaviour
         if (_P2Active)
         {
             Vector3 Direction = new Vector3(Input.GetAxis("P2MoveXaxis"), 0, Input.GetAxis("P2MoveYaxis"));
+            Direction.x = Direction.x * -1f;
 
             if (Direction != Vector3.zero)
                 _P2Component.MoveInDirection(Direction);
+
+            if (Input.GetButtonDown("P2Jump"))
+                _P2Component.UseJump();
+
+
+            if (Input.GetButtonDown("P2Punch"))
+            {
+                _P2Component.UsePunch();
+            }
+
+            if (Input.GetButtonDown("P2Kick"))
+            {
+                _P2Component.UseKick();
+            }
+
         }
 
     }
@@ -98,6 +127,9 @@ public class InputManager : MonoBehaviour
 
             if (Direction != Vector3.zero)
                 _P3Component.MoveInDirection(Direction);
+
+            if (Input.GetButtonDown("P3Jump"))
+                _P3Component.UseJump();
         }
 
     }
@@ -110,6 +142,9 @@ public class InputManager : MonoBehaviour
 
             if (Direction != Vector3.zero)
                 _P4Component.MoveInDirection(Direction);
+
+            if (Input.GetButtonDown("P4Jump"))
+                _P4Component.UseJump();
         }
 
     }

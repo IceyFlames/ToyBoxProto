@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 //Author: Anthony Bogli
 //Date Created: February 22, 2016
@@ -40,8 +41,11 @@ public class Player : MonoBehaviour
     //A float for how strong/ high you will jump
     private float _JumpStrength;
 
+    
+
+
     //If any of the following arms or legs are false it means they are disabled and will play the appropiate animation
-    private bool _LeftLegActive;   
+    private bool _LeftLegActive;
     private bool _RightLegActive;
     private bool _LeftArmActive;
     private bool _RightArmctive;
@@ -76,6 +80,25 @@ public class Player : MonoBehaviour
     //Is the character jumping
     private bool _isJumping;
 
+    //If the character is dead it cannot use its controls
+    private bool _isDead;
+
+    //Punch counter for switching between left and right
+    private int _PunchCounter;
+
+    //Punch counter for switching between left and right
+    private int _KickCounter;
+
+
+    [SerializeField]
+    private string _PlayerName;
+
+    AnimationEvent _Event;
+
+    [SerializeField]
+    private float _cooldown = 5;
+
+
     // Use this for initialization
     void Start()
     {
@@ -88,17 +111,24 @@ public class Player : MonoBehaviour
         _LeftLegComponent = _LeftLegObj.GetComponent<BodyPart>();
 
         _isJumping = false;
+        _isDead = false;
+
         _LeftLegActive = true;
         _RightLegActive = true;
         _RightArmctive = true;
         _LeftArmActive = true;
 
+        
+
+        _PunchCounter = 1;
+        _KickCounter = 1;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        RagDollDeath();
     }
 
     /// <Use Jump Summary>
@@ -106,12 +136,57 @@ public class Player : MonoBehaviour
     /// </summary>
     public void UseJump()
     {
-        if (!_isJumping)
+
+        return;
+        if (_isJumping != true && !_isDead)
         {
             _RigidBody.AddForce(new Vector3(0, _JumpStrength, 0));
+            Debug.Log("Player is jumping");
             _Animator.SetTrigger("IsJumpingStart");
+            _isJumping = true;
         }
     }
+
+    private void RagDollDeath()
+    {
+        if (!_LeftLegActive && !_RightLegActive && !_RightArmctive && !_LeftLegActive)
+        {
+            _Animator.enabled = false;
+            _isDead = true;
+
+            _cooldown -= Time.deltaTime;
+
+            if (_cooldown < 0)
+            {
+
+                switch (_PlayerName)
+                {
+                    case "Player1":
+                        {
+                            int Score = PlayerPrefs.GetInt("Player2Score");
+                            Score++;
+                            PlayerPrefs.SetInt("Player2Score", Score);
+                            SceneManager.LoadScene(0);
+
+                        }
+                        break;
+
+                    case "Player2":
+                        {
+                            int Score = PlayerPrefs.GetInt("Player1Score");
+                            Score++;
+                            PlayerPrefs.SetInt("Player1Score", Score);
+                            SceneManager.LoadScene(0);
+                        }
+                        break;
+
+                }
+            }
+            
+
+        }
+    }
+
 
     /// <UsePunch Summary>
     /// This allows the user to throw a punch, all that should be called here is a
@@ -119,8 +194,76 @@ public class Player : MonoBehaviour
     /// </summary>
     public void UsePunch()
     {
-        _Animator.SetTrigger("IsPunching");
+        if (!_isDead)
+        {
+            if (_PunchCounter == 1 && _LeftArmActive)
+            {
+                _Animator.SetTrigger("isLeftPunching");
+                _PunchCounter++;
+                Debug.Log(_PunchCounter.ToString());
+
+                _LeftArmComponent.tag = "Weapon";
+                _RightArmComponent.tag = "Limb";
+                return;
+            }
+
+            else if (!_LeftArmActive)
+                _PunchCounter++;
+
+            if (_PunchCounter == 2 && _RightArmctive)
+            {
+                _Animator.SetTrigger("isRightPunching");
+                _PunchCounter--;
+                Debug.Log(_PunchCounter.ToString());
+
+                _LeftArmComponent.tag = "Limb";
+                _RightArmComponent.tag = "Weapon";
+                return;
+            }
+
+            else if (!_RightArmctive)
+                _PunchCounter--;
+
+        }
     }
+
+
+    public void UseKick()
+    {
+        if (!_isDead)
+        {
+
+            if (_KickCounter == 1 && _LeftLegActive)
+            {
+                _Animator.SetTrigger("isLeftKicking");
+                _KickCounter++;
+                Debug.Log(_PunchCounter.ToString());
+
+                _LeftLegComponent.tag = "Weapon";
+                _RightLegComponent.tag = "Limb";
+                return;
+            }
+
+            else if (!_LeftLegActive)
+                _KickCounter++;
+
+            if (_KickCounter == 2 && _RightLegActive)
+            {
+                _Animator.SetTrigger("isRightKicking");
+                _KickCounter--;
+                Debug.Log(_PunchCounter.ToString());
+
+                _LeftLegComponent.tag = "Limb";
+                _RightLegComponent.tag = "Weapon";
+                return;
+            }
+
+            else if (!_RightLegActive)
+                _KickCounter--;
+        }
+
+    }
+
 
     /// <Pick Up Weapon>
     /// Allows the user to pick up a object and use it as a weapon
@@ -140,7 +283,7 @@ public class Player : MonoBehaviour
     {
 
     }
-    
+
     /// <Move In Direction>
     /// This Function is called from the InputManager
     /// The character moves in a vector Direction and the 
@@ -149,24 +292,27 @@ public class Player : MonoBehaviour
     /// <param name="Direction"></param>
     public void MoveInDirection(Vector3 Direction)
     {
-        Vector3 NewDirection = (Direction * _MovementSpeed * Time.deltaTime);
-        Debug.Log("The Current Direction" + NewDirection.ToString());
-        transform.position += NewDirection;
-
-
-        Vector3 NewPosition = transform.position + NewDirection;
-
-
-        if (Direction != Vector3.zero)
+        if (!_isDead)
         {
-            Vector3 relativePos = transform.position - NewPosition;
-            Quaternion rotation = Quaternion.LookRotation(-relativePos);
-            transform.rotation = rotation;
+            Vector3 NewDirection = (Direction * _MovementSpeed * Time.deltaTime);
+            Debug.Log("The Current Direction" + NewDirection.ToString());
+            transform.position += NewDirection;
+
+
+            Vector3 NewPosition = transform.position + NewDirection;
+
+
+            if (Direction != Vector3.zero)
+            {
+                Vector3 relativePos = transform.position - NewPosition;
+                Quaternion rotation = Quaternion.LookRotation(-relativePos);
+                transform.rotation = rotation;
+            }
+
+            transform.position += NewDirection;
+
+            _Animator.SetTrigger("IsRunning");
         }
-
-        transform.position += NewDirection;
-
-        _Animator.SetTrigger("IsRunning");
     }
 
 
@@ -202,4 +348,6 @@ public class Player : MonoBehaviour
 
     }
 
+    public string ReturnName() { return _PlayerName; }
+    
 }
