@@ -66,6 +66,32 @@ public class BodyPart : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider collision)
+    {
+        //We Only need to check if the limb is being hit by another weapon because we change the tag of this object to weapon
+        //When its doing the appropiate animation anyways :)
+        if (collision.gameObject.tag == "Weapon")
+        {
+            BodyPart BodyPart = collision.gameObject.GetComponent<BodyPart>();
+
+            if (BodyPart.ReturnName() != _ObjectName)
+            {
+                _Health -= BodyPart.GetWeaponStrength();
+
+                if (_Health < 0)
+                {
+                    _Player.MissingBodyPart(_Limb);
+                    _Renderer.enabled = false;
+                    this.gameObject.SetActive(false);
+                }
+            }
+
+        }
+    }
+
     public int GetWeaponStrength() { return _WeaponStrength; }
     public string ReturnName() { return _ObjectName; }
+
+
+   
 }

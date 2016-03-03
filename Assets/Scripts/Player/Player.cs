@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     //A float for how strong/ high you will jump
     private float _JumpStrength;
 
-    
+
 
 
     //If any of the following arms or legs are false it means they are disabled and will play the appropiate animation
@@ -62,6 +62,14 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject _RightArmObj;
+
+    [SerializeField]
+    private GameObject _LowerBodyObj;
+
+    [SerializeField]
+    private GameObject _HeadObj;
+
+
 
     private BodyPart _LeftLegComponent;
     private BodyPart _RightLegComponent;
@@ -98,6 +106,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _cooldown = 5;
 
+    private bool _DoOnce;
+
+    private float _KickCooldown;
 
     // Use this for initialization
     void Start()
@@ -110,6 +121,8 @@ public class Player : MonoBehaviour
         _RightLegComponent = _RightLegObj.GetComponent<BodyPart>();
         _LeftLegComponent = _LeftLegObj.GetComponent<BodyPart>();
 
+
+
         _isJumping = false;
         _isDead = false;
 
@@ -118,17 +131,20 @@ public class Player : MonoBehaviour
         _RightArmctive = true;
         _LeftArmActive = true;
 
-        
-
         _PunchCounter = 1;
         _KickCounter = 1;
-       
+
+        _KickCooldown = 0;
+
+        _DoOnce = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         RagDollDeath();
+        _KickCooldown -= Time.deltaTime;
     }
 
     /// <Use Jump Summary>
@@ -151,11 +167,61 @@ public class Player : MonoBehaviour
     {
         if (!_LeftLegActive && !_RightLegActive && !_RightArmctive && !_LeftLegActive)
         {
-            _Animator.enabled = false;
+
             _isDead = true;
 
             _cooldown -= Time.deltaTime;
 
+            if (_DoOnce)
+            {
+                #region SetRigidBodyFalse
+                Rigidbody rb = _LeftLegObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                rb = _RightLegObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                rb = _RightArmObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                rb = _LeftArmObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                rb = _HeadObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                rb = _LowerBodyObj.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+                #endregion
+
+                #region SetTriggertoPhysics
+                CapsuleCollider temp = _LeftLegObj.GetComponent<CapsuleCollider>();
+                temp.isTrigger = false;
+
+                temp = _RightLegObj.GetComponent<CapsuleCollider>();
+                temp.isTrigger = false;
+
+                temp = _RightArmObj.GetComponent<CapsuleCollider>();
+                temp.isTrigger = false;
+
+                temp = _LeftArmObj.GetComponent<CapsuleCollider>();
+                temp.isTrigger = false;
+
+
+                BoxCollider temp2 = _LowerBodyObj.GetComponent<BoxCollider>();
+                temp2.isTrigger = false;
+
+                SphereCollider temp3 = _HeadObj.GetComponent<SphereCollider>();
+                temp3.isTrigger = false;
+                #endregion
+                Destroy(GetComponent<Rigidbody>());
+                Destroy(GetComponent<CapsuleCollider>());
+
+                _Animator.enabled = false;
+                _DoOnce = false;
+            }
+
+            #region RestartGame
             if (_cooldown < 0)
             {
 
@@ -182,7 +248,7 @@ public class Player : MonoBehaviour
 
                 }
             }
-            
+            #endregion
 
         }
     }
@@ -199,6 +265,8 @@ public class Player : MonoBehaviour
             if (_PunchCounter == 1 && _LeftArmActive)
             {
                 _Animator.SetTrigger("isLeftPunching");
+
+
                 _PunchCounter++;
                 Debug.Log(_PunchCounter.ToString());
 
@@ -232,15 +300,13 @@ public class Player : MonoBehaviour
     {
         if (!_isDead)
         {
-
             if (_KickCounter == 1 && _LeftLegActive)
             {
-                _Animator.SetTrigger("isLeftKicking");
-                _KickCounter++;
                 Debug.Log(_PunchCounter.ToString());
 
                 _LeftLegComponent.tag = "Weapon";
                 _RightLegComponent.tag = "Limb";
+                _Animator.SetTrigger("isLeftKicking");
                 return;
             }
 
@@ -249,20 +315,20 @@ public class Player : MonoBehaviour
 
             if (_KickCounter == 2 && _RightLegActive)
             {
-                _Animator.SetTrigger("isRightKicking");
-                _KickCounter--;
+
                 Debug.Log(_PunchCounter.ToString());
 
                 _LeftLegComponent.tag = "Limb";
                 _RightLegComponent.tag = "Weapon";
+                _Animator.SetTrigger("isRightKicking");
                 return;
             }
 
             else if (!_RightLegActive)
                 _KickCounter--;
         }
-
     }
+
 
 
     /// <Pick Up Weapon>
@@ -349,5 +415,21 @@ public class Player : MonoBehaviour
     }
 
     public string ReturnName() { return _PlayerName; }
-    
+
+    public void IncrimentKickCounter()
+    {
+        _KickCounter++;
+
+        if (_KickCounter > 2)
+            _KickCounter = 1;
+    }
+
+    public void IncrimentPunchCounter()
+    {
+        _KickCounter++;
+
+        if (_PunchCounter > 2)
+            _PunchCounter = 1;
+    }
+
 }
